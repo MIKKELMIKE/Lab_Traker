@@ -1,65 +1,109 @@
+/* Estilos de la tarjeta individual */
 .tarjeta {
-  border: 1px solid #e0e0e0;
-  padding: 1.5rem;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background: #f8fbfd;
+  border: 1px solid #b8d4e8;
+  border-radius: 10px;
+  padding: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  transition: transform 0.2s;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s;
 }
 
 .tarjeta:hover {
-  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(13, 43, 78, 0.1);
 }
 
-.tarjeta h3 {
-  margin: 0;
-  color: #2c3e50;
-  font-size: 1.1rem;
-}
-
-.estado-container {
+/* Encabezado: paciente y fecha */
+.tarjeta-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.badge {
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.paciente-nombre {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1a2a3a;
 }
 
-.badge.recibido {
-  background-color: #ff4d4d;
-  color: white;
+.fecha-estudio {
+  font-size: 0.75rem;
+  color: #5d7a94;
 }
 
-.badge.procesando {
-  background-color: #ffa500;
-  color: white;
+/* Nombre del estudio */
+.estudio-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d2b4e;
 }
 
-.badge.diagnosticado {
-  background-color: #28a745;
-  color: white;
+/* Tipo de estudio en pequeño */
+.tipo-estudio {
+  font-size: 0.75rem;
+  color: #7f9ab0;
+  font-weight: 500;
 }
 
+/* Número de muestra */
+.estudio-id {
+  font-size: 0.72rem;
+  color: #aabeca;
+  font-family: monospace;
+}
+
+/* Barra de progreso sencilla */
+.progress-bar {
+  height: 3px;
+  background: #d6eaf8;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2e86c1;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+/* Ancho según estado */
+.tarjeta.recibido     .progress-fill { width: 33%; }
+.tarjeta.procesando   .progress-fill { width: 66%; }
+.tarjeta.diagnosticado .progress-fill { width: 100%; background: #1a5276; }
+
+/* Fila inferior: badge + botón */
+.tarjeta-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+/* Botón de avance al siguiente estado */
 .btn-avanzar {
-  margin-top: auto;
-  padding: 0.6rem 1rem;
-  background-color: #007bff;
-  color: white;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #2e86c1;
+  color: #fff;
   border: none;
   border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
 
 .btn-avanzar:hover {
-  background-color: #0056b3;
+  background: #1a5276;
+}
+
+/* Texto cuando el estudio ya está completo */
+.estado-final {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1a5276;
+}
+
+@media (max-width: 600px) {
+  .tarjeta { padding: 0.9rem; }
 }

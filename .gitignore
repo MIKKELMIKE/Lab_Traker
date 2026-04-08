@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos personales o de la prueba técnica
+*guia*.md
+*Guia*.md
+*reto*.md

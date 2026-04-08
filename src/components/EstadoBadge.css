@@ -1,0 +1,30 @@
+/* Badge que muestra el estado actual del estudio */
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid transparent;
+}
+
+/* Colores por estado - todos en tono azul */
+.badge.recibido {
+  background: #d6eaf8;
+  color: #1a6fa6;
+  border-color: #a9cce3;
+}
+
+.badge.procesando {
+  background: #d0e8f5;
+  color: #1a5276;
+  border-color: #85c1e9;
+}
+
+.badge.diagnosticado {
+  background: #d4e6f1;
+  color: #0d2b4e;
+  border-color: #7fb3d3;
+}
