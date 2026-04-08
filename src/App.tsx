@@ -61,9 +61,9 @@ function App() {
       {/* Cabecera */}
       <header className="dashboard-header">
         <div className="header-titulos">
-          <span className="header-eyebrow">Sistema de Gestión Clínica</span>
-          <h1>Lab Tracker</h1>
-          <p>Visualiza y controla el flujo de estudios en tiempo real</p>
+          <span className="header-eyebrow">Reto 2 — Lógica Condicional y TypeScript</span>
+          <h1>State Management</h1>
+          <p>Tracker de Estado de Laboratorio</p>
         </div>
         <button
           id="btn-reiniciar"
@@ -71,7 +71,7 @@ function App() {
           onClick={() => { setEstudios(estudiosIniciales); setBusqueda(''); setFiltroEstado('TODOS'); }}
           aria-label="Reiniciar todos los estudios a su estado inicial"
         >
-          Reiniciar Tracker
+          Reiniciar
         </button>
       </header>
 

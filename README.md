@@ -1,6 +1,6 @@
-# Lab Tracker
+# State Management — Tracker de Estado de Laboratorio
 
-Proyecto desarrollado para la prueba técnica (Reto 2: State Management) del proceso de estadías. Es un sistema sencillo diseñado para visualizar y controlar en qué fase del flujo de trabajo se encuentra cada estudio de laboratorio.
+Proyecto desarrollado para la prueba técnica (Reto 2: Tracker de Estado de Laboratorio) del proceso de estadías. Es un sistema sencillo diseñado para visualizar y controlar en qué fase del flujo de trabajo se encuentra cada estudio de laboratorio.
 
 ## Funciones implementadas
 
